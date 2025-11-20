@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>崩壊スターレイル コード一覧</title>
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <style>
+        body {
+            background-image: url('/hoyoberse-links-2/images/hsr.jpeg');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 崩壊スターレイル コード一覧 🚀</h1>
+        
+        <div class="code-section">
+            <h2>✅ 有効なコード (使用可・新しいもの順)</h2>
+            <div class="code-entry">
+                <span class="code-info" data-code="NEWCODESTARRAIL">NEWCODESTARRAIL</span>
+                <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+            </div>
+            <div class="code-entry">
+                <span class="code-info" data-code="HSRGIFT">HSRGIFT</span>
+                <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+            </div>
+        </div>
+
+        <div class="code-section expired">
+            <h2>❌ 期限切れのコード (古いもの順)</h2>
+            <div class="code-entry">
+                <span class="code-info" data-code="PASTCODE2023">PASTCODE2023</span>
+                <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+            </div>
+            <div class="code-entry">
+                <span class="code-info" data-code="TESTCODE01">TESTCODE01</span>
+                <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+            </div>
+        </div>
+        
+        <a href="/hoyoberse-links-2/mainpage/Hoyoberselink.html" class="code-list-link" style="margin-top: 40px;">トップページに戻る</a>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeElement = button.previousElementSibling;
+            const code = codeElement.getAttribute('data-code');
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'コピー完了!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 1500);
+            }).catch(err => {
+                console.error('コピー失敗:', err);
+                alert('コピーに失敗しました。手動でコピーしてください: ' + code);
+            });
+        }
+    </script>
+</body>
+</html>
