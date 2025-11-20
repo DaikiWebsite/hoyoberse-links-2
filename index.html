@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Hoyoverse コードリンクまとめ</title>
+    <link rel="stylesheet" href="style/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <hr style="margin-top: 40px; margin-bottom: 40px; border-color: rgba(255, 255, 255, 0.3);">
+
+        <p>📚 各ゲームのコード一覧</p>
+        <a href="Subpage/hsr-Code.html" class="code-list-link">🚀 崩壊スターレイル コード一覧へ</a>
+        <a href="Subpage/Genshin-Code.html" class="code-list-link">🍃 原神 コード一覧へ</a>
+        <a href="Subpage/ZenlessZoneZero-Code.html" class="code-list-link">💿 ゼンレスゾーンゼロ コード一覧へ</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                'Genshin.jpeg',
+                'hsr.jpeg',
+                'ZZZ2.jpeg' 
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const selectedImage = images[randomIndex];
+            
+            // 画像パスを相対パスに変更
+            document.body.style.backgroundImage = `url('./images/${selectedImage}')`;
+        });
+    </script>
+</body>
+</html>
